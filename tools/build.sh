@@ -15,3 +15,6 @@ apk update
 apk add --no-cache \
     docker         \
     apptainer
+
+docker --version
+apptainer --version
