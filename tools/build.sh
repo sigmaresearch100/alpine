@@ -14,7 +14,9 @@ apk update
 
 apk add --no-cache \
     docker         \
-    apptainer
+    apptainer      \
+    parallel
 
 docker --version
 apptainer --version
+parallel --version
