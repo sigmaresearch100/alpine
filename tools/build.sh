@@ -12,7 +12,7 @@ EOF
 
 apk update
 apk add --no-cache R
-R -e "if (!require('remotes')) install.packages('remotes')"
+R -e "if (!require('remotes')) install.packages('remotes', repo = 'https://cloud.r-project.org/')"
 R -e "remotes::install_github('ijapesigan/rProject')"
 R -e "library(rProject) ; sessionInfo()"
 
