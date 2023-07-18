@@ -11,19 +11,11 @@ https://dl-cdn.alpinelinux.org/alpine/edge/testing/
 EOF
 
 apk update
+apk add --no-cache \
+    docker         \
+    apptainer      \
+    parallel
 
-apk add --no-cache make gcc g++
-
-apk add --no-cache R R-dev
-R -e "if (!require('remotes')) install.packages('remotes', repo = 'https://cloud.r-project.org/')"
-R -e "remotes::install_github('ijapesigan/rProject')"
-R -e "library(rProject) ; sessionInfo()"
-
-#apk add --no-cache \
-#    docker         \
-#    apptainer      \
-#    parallel
-
-#docker --version
-#apptainer --version
-#parallel --version
+docker --version
+apptainer --version
+parallel --version
