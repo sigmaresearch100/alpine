@@ -12,8 +12,7 @@ EOF
 
 apk update
 
-# cli
-# apk add --no-cache make
+apk add --no-cache make gcc g++
 
 apk add --no-cache R R-dev
 R -e "if (!require('remotes')) install.packages('remotes', repo = 'https://cloud.r-project.org/')"
