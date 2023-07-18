@@ -12,7 +12,9 @@ EOF
 
 apk update
 apk add --no-cache R
-R -e "sessionInfo()"
+R -e "if (!require('remotes')) install.packages('remotes')"
+R -e "remotes::install_github('ijapesigan/rProject')"
+R -e "library(rProject) ; sessionInfo()"
 
 #apk add --no-cache \
 #    docker         \
