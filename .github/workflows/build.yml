@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: alpine
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
       -
