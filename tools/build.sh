@@ -11,12 +11,14 @@ https://dl-cdn.alpinelinux.org/alpine/edge/testing/
 EOF
 
 apk update
+apk add --no-cache R
+R -e "sessionInfo()"
 
-apk add --no-cache \
-    docker         \
-    apptainer      \
-    parallel
+#apk add --no-cache \
+#    docker         \
+#    apptainer      \
+#    parallel
 
-docker --version
-apptainer --version
-parallel --version
+#docker --version
+#apptainer --version
+#parallel --version
