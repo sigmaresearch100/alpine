@@ -11,6 +11,10 @@ https://dl-cdn.alpinelinux.org/alpine/edge/testing/
 EOF
 
 apk update
+
+# cli
+apk add --no-cache make
+
 apk add --no-cache R
 R -e "if (!require('remotes')) install.packages('remotes', repo = 'https://cloud.r-project.org/')"
 R -e "remotes::install_github('ijapesigan/rProject')"
